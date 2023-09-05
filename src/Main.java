@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
@@ -24,12 +25,12 @@ public class Main {
 
          */
         System.out.println("Losowanie 5 liczb do listy");
-        ArrayList<Integer> wylosowaneLiczby = new ArrayList<Integer>();
+        HashSet<Integer> wylosowaneLiczby = new HashSet<>();
         Integer liczba; // typ złożony liczba to obiekt ma metody
         int liczba2;//typ prosty liczba2 nie ma metod to tylko zmienna
 
         while(wylosowaneLiczby.size()<6){
-            int liczbaLosowana = (int)(Math.random()*100+1);
+            int liczbaLosowana = (int)(Math.random()*10+1);
             wylosowaneLiczby.add(liczbaLosowana);
         }
         System.out.println("Wylosowane Liczby"+ wylosowaneLiczby);
