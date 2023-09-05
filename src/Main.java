@@ -40,19 +40,13 @@ public class Main {
             int roznica = wylosowana > wpisana ? wylosowana - wpisana : wpisana - wylosowana;
             //część całkowita z dzielenia
             roznica = roznica / 10; // wynikiem dzielenia liczb całkowitych jest liczba całkowita
-            switch (roznica) {
-                case 0:
-                    System.out.println("Bardzo blisko");
-                    break;
-                case 1:
-                    System.out.println("Całkiem nieźle");
-                    break;
-                case 2:
-                    System.out.println("Trochę brakło");
-                    break;
-                default:
-                    System.out.println("Spróbuj ponownie");
-            }
+            System.out.println(
+                    switch (roznica){
+                        case 0 -> "Było blisko";
+                        case 1 -> "Calkiem nieźle";
+                        default -> "Spróbuj ponownie";
+                    }
+            );
         }
 
     }
