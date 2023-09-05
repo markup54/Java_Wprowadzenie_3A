@@ -18,9 +18,12 @@ public class Main {
          */
         System.out.println("Pierwszy program w Javie");
         System.out.println("wylosowanie jednej liczby z zakresu od 1 do 100");
-        double wylosowana = Math.random()*100+1;//Math.random() losowanie z zakresu <0,1)
+        int wylosowana =(int) (Math.random()*100+1);//Math.random() losowanie z zakresu <0,1)
         //typy proste int,double,float, boolean,char
         //zmienne tych typów nie są obiektami
+        //rzutowanie zawężające
+        //z liczby która zajmuje więcej miejsca w pamięci liczbę zajmującą mniej miejsca w pamięci
+
 
         System.out.println(wylosowana);
     }
