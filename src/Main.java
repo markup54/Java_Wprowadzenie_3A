@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     //nazwa pliku taka jak nazwa klasy
     //zwyczajowo klasa z wielkiej litery
@@ -26,5 +28,9 @@ public class Main {
 
 
         System.out.println(wylosowana);
+        System.out.println("podaj liczbę całkowitą z zakresu 1,100");
+        Scanner klawiatura = new Scanner(System.in);
+        int wpisana;
+        wpisana = klawiatura.nextInt();
     }
 }
