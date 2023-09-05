@@ -25,6 +25,15 @@ public class Main {
         }
         return wczytaneLiczby;
     }
+    private static List<Integer> podsumuj(Set<Integer> wylosowaneLiczby, List<Integer>wczytaneLiczby){
+        List<Integer> trafione = new LinkedList<>();
+        for(Integer wylosowana : wylosowaneLiczby){
+            if(wczytaneLiczby.contains(wylosowana)){
+                trafione.add(wylosowana);
+            }
+        }
+        return trafione;
+    }
     public static void main(String[] args) {
 
         Set<Integer> wylosowaneLiczby;
@@ -35,12 +44,7 @@ public class Main {
         System.out.println("Wczytane liczby "+wczytaneLiczby);
 
         //trafione
-        List<Integer> trafione = new LinkedList<>();
-        for(Integer wylosowana : wylosowaneLiczby){
-            if(wczytaneLiczby.contains(wylosowana)){
-                trafione.add(wylosowana);
-            }
-        }
+        List<Integer> trafione = podsumuj(wylosowaneLiczby,wczytaneLiczby);
         System.out.println("Trafione liczby "+trafione);
      }
 
