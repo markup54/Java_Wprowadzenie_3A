@@ -6,18 +6,13 @@ public class Main {
         System.out.println("Losowanie 6 liczb do listy");
         HashSet<Integer> wylosowaneLiczby = new HashSet<>();
         while(wylosowaneLiczby.size()<6){
-            int liczbaLosowana = (int)(Math.random()*10+1);
+            int liczbaLosowana = (int)(Math.random()*100+1);
             wylosowaneLiczby.add(liczbaLosowana);
         }
         return wylosowaneLiczby;
     }
-    public static void main(String[] args) {
-
-        Set<Integer> wylosowaneLiczby;
-        wylosowaneLiczby = wylosuj();
-        System.out.println("Wylosowane Liczby"+ wylosowaneLiczby);
-        //wczytywanie 6 liczb z klawiatury bez powtórzeń
-        ArrayList<Integer> wczytaneLiczby = new ArrayList<>();
+    private static List<Integer> wczytaj(){
+        List<Integer> wczytaneLiczby = new ArrayList<>();
         Scanner klawiatura = new Scanner(System.in);
         for(int i =1 ; i <7;i++){
             System.out.println("Podaj "+i+" liczbę");
@@ -28,6 +23,15 @@ public class Main {
             }
             wczytaneLiczby.add(liczbaWpisana);
         }
+        return wczytaneLiczby;
+    }
+    public static void main(String[] args) {
+
+        Set<Integer> wylosowaneLiczby;
+        wylosowaneLiczby = wylosuj();
+        System.out.println("Wylosowane Liczby"+ wylosowaneLiczby);
+        //wczytywanie 6 liczb z klawiatury bez powtórzeń
+        List<Integer> wczytaneLiczby = wczytaj();
         System.out.println("Wczytane liczby "+wczytaneLiczby);
 
         //trafione
