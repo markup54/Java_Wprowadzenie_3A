@@ -10,21 +10,23 @@ public class Main {
 
         //System.out.println(wylosowana);
         //pozwalamy na 10 krotne zgadywanie
-
-            System.out.println("podaj liczbę całkowitą z zakresu 1,100");
-            Scanner klawiatura = new Scanner(System.in);
-            int wpisana;
-            wpisana = klawiatura.nextInt();
-            while (wpisana != wylosowana) {
-                if(wpisana<wylosowana)
+        Scanner klawiatura = new Scanner(System.in);
+        int wpisana=-10;
+        do {
+            if (wpisana!=-10) {
+                if (wpisana < wylosowana)
                     System.out.println("Za mało wpisz więcej");
                 else
                     System.out.println("za dużo wpisz mniej");
-                System.out.println("Podaj kolejną liczbę");
-                wpisana = klawiatura.nextInt();
             }
-        }
+            System.out.println("podaj liczbę całkowitą z zakresu 1,100");
+            wpisana = klawiatura.nextInt();
 
         }
+        while (wpisana != wylosowana);
+        System.out.println("Gratulacje");
+    }
+
+}
 
 
