@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -6,7 +7,7 @@ public class Main {
         //losowanie sześciu liczb
 
         //wylosowane liczby zapiszemy w tablicy
-        //tablica w Javie może zawierać tylko typy proste
+        //tablica w Javie może zawierać typy proste i złożone
         //tablica nie może zmieniać rozmiaru w trakcie działania programu
 
         System.out.println("Witamy, wylosujemy 6 liczb");
@@ -22,6 +23,16 @@ public class Main {
         set - HashSet, elementy najczęściej nieindeksowane, nieuporządkowany, nie mogą się powtarzać
 
          */
+        System.out.println("Losowanie 5 liczb do listy");
+        ArrayList<Integer> wylosowaneLiczby = new ArrayList<Integer>();
+        Integer liczba; // typ złożony liczba to obiekt ma metody
+        int liczba2;//typ prosty liczba2 nie ma metod to tylko zmienna
+
+        while(wylosowaneLiczby.size()<6){
+            int liczbaLosowana = (int)(Math.random()*100+1);
+            wylosowaneLiczby.add(liczbaLosowana);
+        }
+        System.out.println("Wylosowane Liczby"+ wylosowaneLiczby);
 
     }
 
