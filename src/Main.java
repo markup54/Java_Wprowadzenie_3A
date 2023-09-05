@@ -20,7 +20,7 @@ public class Main {
          */
         System.out.println("Pierwszy program w Javie");
         System.out.println("wylosowanie jednej liczby z zakresu od 1 do 100");
-        int wylosowana =(int) (Math.random()*100+1);//Math.random() losowanie z zakresu <0,1)
+        int wylosowana = (int) (Math.random() * 100 + 1);//Math.random() losowanie z zakresu <0,1)
         //typy proste int,double,float, boolean,char
         //zmienne tych typów nie są obiektami
         //rzutowanie zawężające
@@ -32,11 +32,28 @@ public class Main {
         Scanner klawiatura = new Scanner(System.in);
         int wpisana;
         wpisana = klawiatura.nextInt();
-        if(wpisana == wylosowana){
+        if (wpisana == wylosowana) {
             System.out.println("Gratulacje, wygrana");
+        } else {
+
+            //wyrazenie warunkowe
+            int roznica = wylosowana > wpisana ? wylosowana - wpisana : wpisana - wylosowana;
+            //część całkowita z dzielenia
+            roznica = roznica / 10; // wynikiem dzielenia liczb całkowitych jest liczba całkowita
+            switch (roznica) {
+                case 0:
+                    System.out.println("Bardzo blisko");
+                    break;
+                case 1:
+                    System.out.println("Całkiem nieźle");
+                    break;
+                case 2:
+                    System.out.println("Trochę brakło");
+                    break;
+                default:
+                    System.out.println("Spróbuj ponownie");
+            }
         }
-        else{
-            System.out.println("Niestety, nie udało się");
-        }
+
     }
 }
