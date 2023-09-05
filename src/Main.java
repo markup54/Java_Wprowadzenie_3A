@@ -34,8 +34,19 @@ public class Main {
             wylosowaneLiczby.add(liczbaLosowana);
         }
         System.out.println("Wylosowane Liczby"+ wylosowaneLiczby);
-
-    }
+        //wczytywanie 6 liczb z klawiatury bez powtórzeń
+        ArrayList<Integer> wczytaneLiczby = new ArrayList<>();
+        Scanner klawiatura = new Scanner(System.in);
+        for(int i =0 ; i <6;i++){
+            System.out.println("Podaj "+i+" liczbę");
+            int liczbaWpisana  = klawiatura.nextInt();
+            while(wczytaneLiczby.contains(liczbaWpisana)){
+                System.out.println("Podaj inną liczbę");
+                liczbaWpisana  = klawiatura.nextInt();
+            }
+            wczytaneLiczby.add(liczbaWpisana);
+        }
+     }
 
 }
 
