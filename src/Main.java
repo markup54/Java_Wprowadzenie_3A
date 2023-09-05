@@ -7,6 +7,7 @@ public class Main {
 
         //wylosowane liczby zapiszemy w tablicy
         //tablica w Javie może zawierać tylko typy proste
+        //tablica nie może zmieniać rozmiaru w trakcie działania programu
 
         System.out.println("Witamy, wylosujemy 6 liczb");
         int wylosowane [] = new int[6];
@@ -14,6 +15,13 @@ public class Main {
             wylosowane[i] = (int)(Math.random()*100+1);
             System.out.println(wylosowane[i]);
         }
+        //losowanie liczb do kolekcji
+        /*
+        kolekcje:
+        listy - ArrayList, LinkedList elementy uporządkowane, indeksowane, mogą się powtarzać
+        set - HashSet, elementy najczęściej nieindeksowane, nieuporządkowany, nie mogą się powtarzać
+
+         */
 
     }
 
